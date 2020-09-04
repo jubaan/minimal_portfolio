@@ -1,0 +1,222 @@
+@import 'minireset';
+@import 'fonts';
+@import 'simple-grid';
+
+*,
+* a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#mobile {
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  -khtml-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #c6c4c1 url('https://images.unsplash.com/photo-1580796726313-7b2861e4a38b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') 49% 50% / cover no-repeat;
+}
+
+#mobileBodyContent {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -khtml-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  background: url('https://images.unsplash.com/photo-1504672281656-e4981d70414b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80') 49% 50% / cover no-repeat;
+}
+
+#header {
+  margin-top: 60px;
+  color: white;
+}
+
+#title {
+  height: 20px;
+  width: 200px;
+  margin: 40px auto;
+  background: #eae8e5;
+}
+
+#text .item {
+  height: 10px;
+  width: calc(100% - 40px);
+  margin: 20px auto;
+  background: #eae8e5;
+}
+
+#burgerBtn {
+  border-top: 5px solid #fff;
+  height: 25px;
+  width: 30px;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 30;
+  left: 20px;
+  top: 15px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -khtml-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+#burgerBtn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  left: 0;
+  background: #fff;
+  top: 5px;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -khtml-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+#burgerBtn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  left: 0;
+  background: #fff;
+  bottom: 0;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -khtml-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+#nav {
+  position: absolute;
+  top: 0px;
+  z-index: 10;
+  list-style-type: none;
+  margin: 100px 0 0 20px;
+  padding: 0;
+  overflow: hidden;
+}
+
+#nav li {
+  width: 0;
+  margin: 30px 0;
+  -webkit-transition: all 0.6s ease-in;
+  -moz-transition: all 0.6s ease-in;
+  -khtml-transition: all 0.6s ease-in;
+  -o-transition: all 0.6s ease-in;
+  transition: all 0.6s ease-in;
+}
+
+#nav li + li {
+  margin-left: -40px;
+}
+
+#nav li + li + li {
+  margin-left: -80px;
+}
+
+#nav li a {
+  color: #fff;
+  font-weight: 900;
+  font-size: 50px;
+}
+
+.navigation #nav li {
+  width: 200px;
+  margin-left: 0;
+}
+
+.navigation #burgerBtn {
+  border-color: transparent;
+}
+
+.navigation #burgerBtn::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -khtml-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 33px;
+  left: -2px;
+}
+
+.navigation #burgerBtn::after {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -khtml-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  bottom: 11px;
+  width: 33px;
+  left: -2px;
+}
+
+.reduce.navigation #mobileBodyContent {
+  -webkit-transform: scale(0.85);
+  -moz-transform: scale(0.85);
+  -khtml-transform: scale(0.85);
+  -o-transform: scale(0.85);
+  transform: scale(0.85);
+  margin-left: 260px;
+}
+
+// .navbar {
+//   position: absolute;
+//   font-weight: 900;
+
+//   .nav__menu {
+//     display: flex;
+
+//     .nav__item--last {
+//       justify-self: right;
+//     }
+//   }
+// }
+// header {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+
+//   .flex {
+//     display: flex;
+//     flex-direction: row;
+//     flex-grow: 1;
+//   }
+// }
+
+// main {
+//   height: 100vh;
+// }
+.hero {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -99;
+}
